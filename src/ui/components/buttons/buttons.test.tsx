@@ -7,4 +7,8 @@ describe('button component render correctly', () => {
         render(<Button />);
         expect(screen.getByText('Hello world')).toBeInTheDocument();
     });
+    it('should allow user to change color props', () => {
+        render(<Button color="red" />);
+        expect(screen.getByText('Hello world red')).toBeInTheDocument();
+    });
 });
