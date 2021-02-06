@@ -5,7 +5,7 @@ import 'src/assets/tailwind.css';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Button />
+        <Button label="Mr.eudes" />
     </React.StrictMode>,
-    document.getElementById('root'),
+    document.getElementById('root') as HTMLElement,
 );

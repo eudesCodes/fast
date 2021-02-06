@@ -1,0 +1,73 @@
+.button__root{
+    @apply inline-flex items-center justify-center font-sans;
+}
+
+/**
+* background css
+*/
+.background__none{
+    @apply bg-transparent text-gray-500
+}
+
+.background__purple{
+    @apply bg-purple-500 text-white;
+}
+
+/**
+* shadow css
+*/
+.shadow__none{
+    @apply shadow-none
+}
+.shadow__inner{
+    @apply shadow-inner
+}
+.shadow__medium{
+    @apply shadow-md border-0;
+}
+
+/**
+* size css
+*/
+.variant__small{
+    @apply  p-2 w-auto;
+}
+
+.variant__large{
+    @apply  p-4 w-full;
+}
+
+/**
+* padding css
+*/
+
+.padding__small{
+    @apply  p-2;
+}
+.padding__medium{
+    @apply  p-4;
+}
+.border__none{
+    @apply border-0
+}
+
+/**
+* Border css
+*/
+.border__purple{
+    @apply border-2 border-purple-500;
+}
+
+/**
+* Border Radius css
+*/
+.rounded__none{
+    @apply rounded-none ;
+}
+.rounded__full{
+    @apply rounded-full;
+}
+.rounded__medium{
+    @apply rounded-xl;
+}
+
