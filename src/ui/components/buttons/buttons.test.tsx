@@ -6,22 +6,22 @@ import { Button } from 'src/ui';
 
 describe('button component render correctly', () => {
     it('should allow user to see button', () => {
-        render(<Button label="eudes-UI" />);
+        render(<Button label="Hello world!" />);
 
-        expect(screen.getByText('eudes-UI')).toBeInTheDocument();
+        expect(screen.getByText('Hello world!')).toBeInTheDocument();
     });
 
     it('should allow user to see button compoenent with the type attribute', () => {
-        render(<Button label="eudes-UI" type="button" />);
+        render(<Button label="Hello world!" type="button" />);
 
-        expect(screen.getByText('eudes-UI')).toHaveAttribute('type', 'button');
+        expect(screen.getByText('Hello world!')).toHaveAttribute('type', 'button');
     });
 
     it('should button is focused when clicked', () => {
-        render(<Button label="eudes-UI" />);
+        render(<Button label="Hello world!" />);
 
-        userEvent.click(screen.getByText('eudes-UI'));
+        userEvent.click(screen.getByText('Hello world!'));
 
-        expect(screen.getByText('eudes-UI')).toHaveFocus();
+        expect(screen.getByText('Hello world!')).toHaveFocus();
     });
 });

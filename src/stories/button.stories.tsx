@@ -11,21 +11,29 @@ export default {
 
 const Template: Story<TButtonTypes> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const icon = Template.bind({});
 
-Primary.args = {
+icon.args = {
     iconsvg: <UserIcon className="w-8 h-8" />,
+    label: 'Hello world!',
+    className: {
+        shadow: 'medium',
+        variant: 'large',
+        background: 'purple',
+        rounded: 'full',
+    },
 };
 
-export const Secondary = Template.bind({});
+export const Default = Template.bind({});
 
-Secondary.args = {
+Default.args = {
     className: {
         shadow: 'medium',
         variant: 'small',
         background: 'purple',
-        rounded: 'full',
+        rounded: 'medium',
+        padding: 'small',
     },
 
-    label: 'Mr.eudes',
+    label: 'Hello world!',
 };
