@@ -1,5 +1,5 @@
 .button__root{
-    @apply inline-flex items-center justify-center font-sans;
+    @apply inline-flex items-center justify-between font-sans;
 }
 
 /**
