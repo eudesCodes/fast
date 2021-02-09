@@ -1,12 +1,21 @@
 .button__root{
-    @apply inline-flex items-center justify-between font-sans;
+    @apply inline-flex items-center justify-center;
 }
 
+.width__root{
+    @apply inline-flex items-center justify-between font-sans;
+}
+.width__full{
+    @apply w-full
+}
+.width__medium{
+    @apply w-2/4
+}
 /**
 * background css
 */
 .background__none{
-    @apply bg-transparent text-gray-500
+    @apply bg-transparent text-purple-500;
 }
 
 .background__purple{

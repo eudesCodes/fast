@@ -6,7 +6,7 @@ import { useToggleState } from '@react-stately/toggle';
 import mergeRefs from 'react-merge-refs';
 import { mergeProps } from '@react-aria/utils';
 import { useFocusRing } from '@react-aria/focus';
-import styles from 'src/ui/components/switch/switch.module.css';
+import styles from './switch.module.css';
 import classnames from 'classnames';
 
 import type { AriaSwitchProps } from '@react-types/switch';
@@ -17,11 +17,11 @@ import type { AriaSwitchProps } from '@react-types/switch';
  * @property {string} variant - custom switch component
  */
 type TModuleCssTypes = {
-    variant: 'dark' | 'elastic' | 'normal';
+    variant: 'dark' | 'elastic' | 'join';
 };
 
 /**
- * @typedef TswitchTypes
+ * @typedef TSwitchTypes
  * @type { object }
  * @property {string} id - an ID
  * @property {string} label - Label of the switch
@@ -29,9 +29,8 @@ type TModuleCssTypes = {
  * @property {TModuleCssTypes} className - Css class
  * @property {React.ReactNode} iconsvg - Add a svg image
  */
-export type TswitchTypes = AriaSwitchProps & {
+export type TSwitchTypes = AriaSwitchProps & {
     id?: string;
-    label?: string;
     type: 'checkbox';
     className?: TModuleCssTypes;
 };
@@ -43,7 +42,7 @@ export type TswitchTypes = AriaSwitchProps & {
  * @returns React.ForwardRefExoticComponent
  *
  */
-export const Switch = React.forwardRef<HTMLInputElement, TswitchTypes>(
+export const Switch = React.forwardRef<HTMLInputElement, TSwitchTypes>(
     (Props, forwardRef): JSX.Element => {
         /**
          * @description Destructuring props

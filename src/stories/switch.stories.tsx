@@ -10,15 +10,14 @@ export default {
 
 const Template: Story<TSwitchTypes> = (args) => <Switch {...args} />;
 
-export const theme = Template.bind({});
+export const dark = Template.bind({});
 
-theme.args = {
+dark.args = {
     className: {
         variant: 'dark',
     },
     id: 'switch_id',
     type: 'checkbox',
-    label: 'Hello world!',
 };
 
 export const elastic = Template.bind({});
@@ -29,7 +28,6 @@ elastic.args = {
     },
     id: 'switch_id',
     type: 'checkbox',
-    label: 'Hello world!',
 };
 
 export const join = Template.bind({});
@@ -40,5 +38,4 @@ join.args = {
     },
     id: 'switch_id',
     type: 'checkbox',
-    label: 'Hello world!',
 };

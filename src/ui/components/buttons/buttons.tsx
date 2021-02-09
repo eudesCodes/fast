@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useButton } from '@react-aria/button';
 import mergeRefs from 'react-merge-refs';
 import { mergeProps } from '@react-aria/utils';
-import styles from 'src/ui/components/buttons/buttons.module.css';
+import styles from './buttons.module.css';
 import classnames from 'classnames';
 
 import type { AriaButtonProps } from '@react-types/button';
@@ -26,6 +26,7 @@ type TModuleCssTypes = {
     background?: 'none' | 'purple';
     border?: 'none' | 'purple';
     shadow?: 'none' | 'inner' | 'medium';
+    width?: 'full' | 'medium';
 };
 
 /**
@@ -85,8 +86,12 @@ export const Button = React.forwardRef<HTMLButtonElement, TButtonTypes>(
                     'focus:outline-none',
                 )}
             >
-                {iconsvg}
-                {label}
+                <div
+                    className={classnames(styles.width__root, styles[`width__${className?.width}`])}
+                >
+                    {iconsvg}
+                    {label}
+                </div>
             </button>
         );
     },
