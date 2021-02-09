@@ -8,13 +8,13 @@ describe('checkbox component render correctly', () => {
     it('should allow user to see checkbox', () => {
         render(<Checkbox type="checkbox" label="Hello world!" aria-label="Hello world!" />);
 
-        expect(screen.getByText('Hello world!')).toBeInTheDocument();
+        expect(screen.getByText(/hello world!/i)).toBeInTheDocument();
     });
 
     it('shows the children when the checkbox is checked', () => {
         render(<Checkbox type="checkbox" label="Hello world!" aria-label="Hello world!" />);
 
-        userEvent.click(screen.getByText('Hello world!'));
+        userEvent.click(screen.getByText(/hello world!/i));
         expect(screen.getByRole('checkbox')).toBeChecked();
     });
 });

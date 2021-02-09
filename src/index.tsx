@@ -5,7 +5,13 @@ import { Switch } from 'src/ui';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Switch label="hello world!" id="switch_id" type="checkbox" />
+        <Switch
+            id="switch_id"
+            type="checkbox"
+            className={{
+                variant: 'dark',
+            }}
+        />
     </React.StrictMode>,
     document.getElementById('root') as HTMLElement,
 );

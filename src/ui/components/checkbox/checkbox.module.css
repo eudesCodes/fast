@@ -87,8 +87,7 @@ input:checked~.span_second_child__task{
     @apply inline-block align-middle text-gray-500 bg-white;
     outline: none;
     transform: translate3d(0, 0, 0);
-   
-    border: 2px solid rgba(139, 139, 139, .3);
+    border: 1px solid rgba(139, 139, 139, .3);
     border-radius: 25px;
     padding: 5px 12px;
 }
@@ -102,12 +101,12 @@ input:checked~ .span_second_child__chippy{
 .span_second_child__chippy::before {
    @apply inline-block;
    padding: 2px 6px 2px 2px;
-   content: "+";
+   content: "-";
    transition: transform .3s ease-in-out;
 }
 
 input:checked~ .span_second_child__chippy::before {
-    content: "✓";
+    content: "+";
     transform: rotate(-360deg);  
 }
 
@@ -130,10 +129,9 @@ input:checked~ .span_second_child__chippy::before {
 }
 
 .span_first_child__normal{
-    @apply mr-2 relative w-6 h-6 text-white align-middle rounded-full;
+    @apply mr-2 relative w-6 h-6 text-white align-middle border border-2 rounded-full;
     transform: scale(1);
     vertical-align: middle;
-    border: 1px solid #B9B8C3;
     transition: all 0.2s ease;
 }
 
@@ -185,20 +183,16 @@ input:checked~.span_second_child__normal{
     outline: none;
 }
 .span_first_child__radio {
-   @apply relative block float-left mr-2 w-5 h-5;
-   border: 2px solid #c8ccd4;
-    border-radius: 100%;
-    -webkit-tap-highlight-color: transparent;
+   @apply relative block mr-2 w-5 h-5 border border-2 rounded-full;
 }
 .span_first_child__radio::after{
-    @apply absolute w-3 h-3 bg-purple-600 pointer-events-none;
+    @apply absolute w-3 h-3 bg-purple-600 pointer-events-none rounded-full;
     content: '';
-    top: 2px;
-    left: 2px;
-    border-radius: 100%;
+    top: 3px;
+    left: 3px;
     transform: scale(0);
     transition: all 0.2s ease;
-    opacity: 0.08;
+    opacity: 0;
   }
   .checkbox_label_root__radio::hover > .span_first_child__radio::after {
     transform: scale(3.6);
@@ -215,6 +209,8 @@ input:checked~.span_second_child__normal{
   }
   .svg_child__radio{
     display: none;
+    position: absolute;
+    top:0
 }
 /** KEYFRAME */
 @keyframes check {
