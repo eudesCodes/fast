@@ -24,10 +24,8 @@ type TModuleCssTypes = {
  * @typedef TSwitchTypes
  * @type { object }
  * @property {string} id - an ID
- * @property {string} label - Label of the switch
  * @property {string} type - Type of the switch
  * @property {TModuleCssTypes} className - Css class
- * @property {React.ReactNode} iconsvg - Add a svg image
  */
 export type TSwitchTypes = AriaSwitchProps & {
     id?: string;

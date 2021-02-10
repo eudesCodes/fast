@@ -56,13 +56,14 @@
 .padding__medium{
     @apply  p-4;
 }
-.border__none{
-    @apply border-0
-}
 
 /**
 * Border css
 */
+.border__none{
+    @apply border-0
+}
+
 .border__purple{
     @apply border-2 border-purple-500;
 }
