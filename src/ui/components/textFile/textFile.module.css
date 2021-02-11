@@ -1,0 +1,53 @@
+*{ user-select: none;}
+
+.textFile_root{
+    @apply absolute w-20 h-auto p-4 border border-dashed rounded-xl border-purple-500;
+}
+
+/**
+* shadow css
+*/
+.shadow__none{
+    @apply shadow-none
+}
+.shadow__inner{
+    @apply shadow-inner
+}
+.shadow__medium{
+    @apply shadow-md border-0;
+}
+/**
+* Border css
+*/
+.border__none{
+    @apply border-0
+}
+
+.border__purple{
+    @apply border border-dashed border-purple-500;
+}
+
+/**
+* Border Radius css
+*/
+.rounded__none{
+    @apply rounded-none ;
+}
+.rounded__full{
+    @apply rounded-full;
+}
+.rounded__medium{
+    @apply rounded-xl;
+}
+
+/** default **/
+
+.relative_child__default{
+    @apply flex flex-col-reverse w-auto h-auto;
+}
+
+.label_child__default{
+    @apply flex justify-center flex-wrap content-center rounded-full w-auto h-auto cursor-pointer p-2 text-purple-500 overflow-hidden;
+}
+
+

@@ -1,7 +1,7 @@
 *{ user-select: none;}
 
 .textField_label_root{
-    @apply flex flex-wrap content-evenly w-full h-auto cursor-pointer flex-wrap px-4;
+    @apply flex flex-wrap content-evenly w-full h-auto cursor-pointer px-4;
 }
 
 /**

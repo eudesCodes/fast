@@ -30,9 +30,9 @@ elastic.args = {
     type: 'checkbox',
 };
 
-export const join = Template.bind({});
+export const slider = Template.bind({});
 
-join.args = {
+slider.args = {
     className: {
         variant: 'join',
     },
