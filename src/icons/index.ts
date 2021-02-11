@@ -4,3 +4,4 @@ export * from 'src/icons/svg/microphone';
 export * from 'src/icons/svg/download';
 export * from 'src/icons/svg/photograph';
 export * from 'src/icons/svg/close';
+export * from 'src/icons/svg/search';
