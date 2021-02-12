@@ -5,3 +5,4 @@ export * from 'src/ui/components/link/link';
 export * from 'src/ui/components/textField/textField';
 export * from 'src/ui/components/textFile/textFile';
 export * from 'src/ui/components/textSearch/textSearch';
+export * from 'src/ui/components/countDown/countDown';
