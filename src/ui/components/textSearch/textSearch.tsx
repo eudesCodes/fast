@@ -32,7 +32,6 @@ type TModuleCssTypes = {
  * @property {string} label - Label of the textSearch
  * @property {string} type - Type of the textSearch
  * @property {string} text - label of the textSearch for ( micro )
- * @property {boolean} icon - presence of icon
  * @property {React.ReactNode} firstIcon - add icon
  * @property {React.ReactNode} secondIcon - add icon
  * @property {TModuleCssTypes} className - Css class
