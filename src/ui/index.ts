@@ -7,3 +7,4 @@ export * from 'src/ui/components/textFile/textFile';
 export * from 'src/ui/components/textSearch/textSearch';
 export * from 'src/ui/components/countDown/countDown';
 export * from 'src/ui/components/pagination/pagination';
+export * from 'src/ui/components/accordion/accordion';

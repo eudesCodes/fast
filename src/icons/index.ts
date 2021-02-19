@@ -6,4 +6,6 @@ export * from 'src/icons/svg/photograph';
 export * from 'src/icons/svg/close';
 export * from 'src/icons/svg/search';
 export * from 'src/icons/svg/chevronright';
+export * from 'src/icons/svg/chevrondown';
 export * from 'src/icons/svg/chevronleft';
+export * from 'src/icons/svg/chevronup';
