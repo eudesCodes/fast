@@ -9,3 +9,4 @@ export * from 'src/icons/svg/chevronright';
 export * from 'src/icons/svg/chevrondown';
 export * from 'src/icons/svg/chevronleft';
 export * from 'src/icons/svg/chevronup';
+export * from 'src/icons/svg/bell';
