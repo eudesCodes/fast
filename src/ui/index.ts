@@ -10,3 +10,4 @@ export * from 'src/ui/components/pagination/pagination';
 export * from 'src/ui/components/accordion/accordion';
 export * from 'src/ui/components/avatar/avatar';
 export * from 'src/ui/components/alert/alert';
+export * from 'src/ui/components/banner/banner';
