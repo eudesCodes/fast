@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'src/assets/tailwind.css';
-import { Card } from 'src/ui';
+import { MenuProvider } from 'src/ui';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Card className={{ shadow: 'medium', rounded: 'medium' }} />
+        <MenuProvider menuContent={[{ title: 'home', href: '#' }]}>menu</MenuProvider>
     </React.StrictMode>,
     document.getElementById('root') as HTMLElement,
 );

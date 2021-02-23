@@ -1,0 +1,71 @@
+
+label.close_label {
+  @apply cursor-pointer fixed;
+  right: 1rem;
+top: 1rem;
+z-index: 100;
+}
+
+input ~ label.close_label .close_btn {
+  @apply block h-12 p-0 relative w-12;
+  transition: all 0.7s ease-out;
+ 
+}
+.close_btn::before, .close_btn::after {
+    @apply bg-purple-500 rounded-2xl h-1 absolute;
+    content: "";
+    transition: all 0.7s ease-out;
+    width: calc(100% - 1rem);
+}
+.close_btn::before {
+  transform: rotate(0) translateY(-100%);
+}
+.close_btn::after {
+  transform: rotate(0) translateY(100%);
+  
+}
+
+input:checked ~ label.close_label .close_btn::before {
+    @apply bg-white;
+  transform: rotate(45deg);
+ 
+}
+input:checked ~ label.close_label .close_btn::after {
+    @apply bg-white;
+    transform: rotate(-45deg);
+}
+
+
+input:checked ~ .nav_main {
+    transform: translate(0,0);
+}
+
+.nav_main {
+    @apply bg-purple-700 items-center flex h-full justify-center fixed w-full;
+    transform: translate(-110%,-110%);
+    transition: all 0.4s ease-out;
+}
+
+
+.menu__link ,.menu{
+    @apply uppercase font-bold text-white text-center relative no-underline;
+    transition: all 0.4s ease-out;
+  }
+  
+ .menu__link {
+    opacity: 0.5;
+    transition-duration: 0.4s;
+  }
+ 
+  .menu__item:hover > .menu__link {
+    @apply text-white opacity-100;
+    transform: translate(0, 0);
+  }
+  
+.container{
+  @apply flex flex-col min-h-screen justify-center p-4;
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+

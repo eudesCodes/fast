@@ -12,3 +12,4 @@ export * from 'src/ui/components/avatar/avatar';
 export * from 'src/ui/components/alert/alert';
 export * from 'src/ui/components/banner/banner';
 export * from 'src/ui/components/card/card';
+export * from 'src/ui/components/menu/menu';

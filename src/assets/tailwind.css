@@ -3,3 +3,13 @@
 @tailwind utilities;
 
 
+:root {
+    --color-primary: #18181A;
+    --color-secondary: #75757C;
+    --color-dark: #364C62;
+    --color-light: #F5F5F5;
+    --font-family-primary: "Roboto Mono", monospace;
+    --font-family-secondary: "Rubik Mono One", sans-serif;
+    --td: 150ms;
+    --te: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
