@@ -63,7 +63,7 @@ export const Card = React.forwardRef<HTMLInputElement, TCardTypes>(
                 >
                     <div className="h-56 p-4 animate-pulse bg-purple-200">
                         <div className="flex justify-end text-white">
-                            <div className="h-6 w-6 animate-pulse bg-indigo-300"></div>
+                            <div className="h-6 w-6 rounded-sm animate-pulse bg-indigo-300"></div>
                         </div>
                     </div>
                     <div className="p-4">
@@ -73,18 +73,18 @@ export const Card = React.forwardRef<HTMLInputElement, TCardTypes>(
                     </div>
                     <div className="flex p-4 border-t border-gray-300 text-gray-700">
                         <div className="flex-1 inline-flex items-center">
-                            <div className="h-6 w-6 mr-3 animate-pulse bg-indigo-300"></div>
+                            <div className="h-6 w-6 mr-1 rounded-sm animate-pulse bg-indigo-300"></div>
                             <p className="animate-pulse bg-gray-200 w-full h-3"></p>
                         </div>
-                        <div className="flex-1 inline-flex items-center ml-2">
-                            <div className="h-6 w-6 mr-3 animate-pulse bg-indigo-300"></div>
+                        <div className="flex-1 inline-flex items-center ml-1">
+                            <div className="h-6 w-6 mr-1 rounded-sm animate-pulse bg-indigo-300"></div>
                             <p className="animate-pulse bg-gray-200 w-full h-3"></p>
                         </div>
                     </div>
                     <div className="p-4 border-t border-gray-200">
                         <div className="animate-pulse bg-indigo-100 w-2/3 h-4 mb-2"></div>
                         <div className="flex items-center">
-                            <div className="w-10 h-10 animate-pulse bg-purple-200"></div>
+                            <div className="w-10 h-10 rounded-sm animate-pulse bg-purple-200"></div>
                             <div className="w-full ml-3">
                                 <p className="animate-pulse bg-gray-200 w-2/4 h-4 mb-1"></p>
                                 <p className="animate-pulse bg-gray-200 w-1/4 h-3"></p>
