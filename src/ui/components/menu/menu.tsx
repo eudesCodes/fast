@@ -10,6 +10,12 @@ import styles from './menu.module.css';
  */
 type TModuleCssTypes = {};
 
+/**
+ * @typedef Tmenu
+ * @type { object }
+ * @property {string} title - menu title
+ * @property {string} href - menu href
+ */
 type Tmenu = {
     title?: string;
     href?: string;
@@ -19,6 +25,8 @@ type Tmenu = {
  * @type { object }
  * @property {string} id - an ID
  * @property {TModuleCssTypes} className - Css class
+ * @property {Tmenu[]} menuContent -
+ * @property {React.ReactNode} children -
  */
 export type TMenuTypes = {
     id?: string;
@@ -35,13 +43,9 @@ const CreateMenuContext = React.createContext<any>({});
 /**
  * @function
  * @constant MenuProvider
- * @param { React.PropsWithChildren } - children
  * @returns { JSX.Element }
  */
-export const MenuProvider: React.FC<TMenuTypes> = ({
-    children,
-    menuContent,
-}: React.PropsWithChildren<any>): JSX.Element => {
+export const MenuProvider: React.FC<TMenuTypes> = ({ children, menuContent }): JSX.Element => {
     return (
         <CreateMenuContext.Provider value={{}}>
             <input type="checkbox" id="main-navigation" className="appearance-none sr-only" />
