@@ -117,8 +117,9 @@ export const ToastProvider: React.FC<TToastProviderTypes> = ({
                     {state?.map(({ content, id, options }) => (
                         <motion.div
                             key={id}
-                            initial={{ opacity: 0, y: '-100px' }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: '100%' }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.7 }}
                             className={classnames(
                                 styles[`toast_appearance__${options?.appearance}`],
                             )}

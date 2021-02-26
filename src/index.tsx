@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'src/assets/tailwind.css';
-import { ToastProvider, Toast } from 'src/ui';
+import { DropZone } from 'src/ui';
 
 ReactDOM.render(
     <React.StrictMode>
-        <ToastProvider className={{ position: 'bottom-center' }}>
-            <Toast />
-        </ToastProvider>
+        <DropZone
+            id="dropzone_id"
+            aria-label="dropozone"
+            onGetFilesList={(list) => console.log(list)}
+        />
     </React.StrictMode>,
     document.getElementById('root') as HTMLElement,
 );
