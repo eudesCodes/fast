@@ -1,0 +1,11 @@
+
+
+.dragAnddroplist_root{
+    @apply flex justify-start cursor-pointer text-gray-700  rounded-md px-2 py-2 my-2 border-2 border border-blue-400;
+}
+
+.dragAnddroplist_root:hover{
+    @apply text-blue-400 bg-blue-100;
+}
+
+

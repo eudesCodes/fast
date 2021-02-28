@@ -5,7 +5,7 @@ import { MicrophoneIcon } from 'src/icons';
 import { Link, TLinkTypes } from 'src/ui';
 
 export default {
-    title: 'Controls/Link',
+    title: 'Utilities/Link',
     component: Link,
 } as Meta;
 

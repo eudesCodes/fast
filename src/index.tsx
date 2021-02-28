@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'src/assets/tailwind.css';
-import { DropZone } from 'src/ui';
+import { DragAndDropList } from 'src/ui';
 
 ReactDOM.render(
     <React.StrictMode>
-        <DropZone
-            id="dropzone_id"
-            aria-label="dropozone"
-            onGetFilesList={(list) => console.log(list)}
+        <DragAndDropList
+            id="dragdroplist_id"
+            aria-label="dragdroplist"
+            items={[
+                { content: '🇨🇬 Congo-brazzaville' },
+                { content: '🇨🇩 Congo-Kinshassa' },
+                { content: '🇬🇭 Ghana' },
+                { content: '🇫🇷 France' },
+                { content: '🇺🇸 United States of America' },
+            ]}
         />
     </React.StrictMode>,
     document.getElementById('root') as HTMLElement,
