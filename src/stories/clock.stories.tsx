@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { TCountDownTypes, CountDown } from 'src/ui';
 
 export default {
-    title: 'Controls/Clock',
+    title: 'Utilities/Clock',
     component: CountDown,
 } as Meta;
 

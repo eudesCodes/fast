@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { MenuProvider } from 'src/ui';
 
 export default {
-    title: 'Utilities/MenuContext',
+    title: 'Contexts/MenuContext',
     component: MenuProvider,
 } as Meta;
 

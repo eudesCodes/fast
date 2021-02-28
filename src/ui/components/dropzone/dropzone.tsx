@@ -112,6 +112,7 @@ export const DropZone = React.forwardRef<HTMLInputElement, TDropZoneTypes>(
                 onDragOver={dragOverFn}
                 onDragLeave={dragLeaveFn}
                 onDrop={fileDropFn}
+                draggable={true}
             >
                 <input
                     id={id}

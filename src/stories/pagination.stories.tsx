@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { Pagination, TPaginationTypes } from 'src/ui';
 
 export default {
-    title: 'Layout/Pagination',
+    title: 'Utilities/Pagination',
     component: Pagination,
 } as Meta;
 
