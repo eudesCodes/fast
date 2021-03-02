@@ -6,6 +6,7 @@
         "@craco/craco": "^6.1.0",
         "autoprefixer": "^9",
         "classnames": "^2.2.6",
+        "dayjs": "^1.10.4",
         "framer-motion": "^3.6.7",
         "react": "^17.0.1",
         "react-aria": "^3.3.0",

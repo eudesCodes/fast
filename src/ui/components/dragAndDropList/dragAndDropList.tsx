@@ -115,7 +115,7 @@ export const DragAndDropList = React.forwardRef<HTMLDivElement, TDragAndDropList
                 /**
                  * @constant updatePositionItems
                  */
-                if (state.startPosition) {
+                if (state.startPosition !== undefined) {
                     const updatePositionItems = [
                         ...remainingItems.slice(0, index),
                         sortableItems[state.startPosition],
