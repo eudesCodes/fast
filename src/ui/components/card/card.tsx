@@ -34,7 +34,7 @@ export type TCardTypes = {
  * @returns React.ForwardRefExoticComponent
  *
  */
-export const Card = React.forwardRef<HTMLInputElement, TCardTypes>(
+export const Card = React.forwardRef<HTMLDivElement, TCardTypes>(
     (Props, forwardRef): JSX.Element => {
         /**
          * @description Destructuring props
@@ -43,10 +43,10 @@ export const Card = React.forwardRef<HTMLInputElement, TCardTypes>(
         const { id, className } = Props;
 
         /**
-         * @type React.RefObject<HTMLInputElement>
+         * @type React.RefObject<HTMLDivElement>
          * @return { object}
          */
-        const outRef: React.RefObject<HTMLInputElement> = React.useRef<HTMLInputElement>(null);
+        const outRef: React.RefObject<HTMLDivElement> = React.useRef<HTMLDivElement>(null);
 
         return (
             <div
