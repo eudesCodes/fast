@@ -17,3 +17,4 @@ export * from 'src/ui/components/toast/toast';
 export * from 'src/ui/components/dropzone/dropzone';
 export * from 'src/ui/components/dragAndDropList/dragAndDropList';
 export * from 'src/ui/components/calendar/calendar';
+export * from 'src/ui/components/datepicker/datepicker';

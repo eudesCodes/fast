@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'src/assets/tailwind.css';
-import { Calendar } from 'src/ui';
+import { Datepicker } from 'src/ui';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Calendar
-            id="calendar_id"
-            aria-label="calendar"
-            onDatePicker={(date) => console.log(date)}
+        <Datepicker
+            id="datepicker_id"
+            aria-label="datepicker"
+            name="datepicker_name"
+            onDatePicker={() => {}}
         />
     </React.StrictMode>,
     document.getElementById('root') as HTMLElement,

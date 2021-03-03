@@ -56,7 +56,7 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
         const [stateCurrentMonth, setStateCurrentMonth] = React.useState<dayjs.Dayjs>(
             dayjs(new Date()),
         );
-        const [stateCurrentCellsDay, setStateCurrentCellsDay] = React.useState<any>([]);
+        const [stateCurrentCellsDay, setStateCurrentCellsDay] = React.useState<JSX.Element[]>([]);
         const [stateDays, setStateDays] = React.useState<Array<string>>([]);
         const [stateDateSelected, setStateDateSelected] = React.useState<string>();
 
@@ -211,7 +211,7 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
                         ))}
                     </div>
                     <div className={classnames(styles?.cells)}>
-                        {stateCurrentCellsDay?.map((cellsADy: string, index: number) => (
+                        {stateCurrentCellsDay?.map((cellsADy: JSX.Element, index: number) => (
                             <div className={classnames(styles?.days)} key={index}>
                                 {cellsADy}
                             </div>
