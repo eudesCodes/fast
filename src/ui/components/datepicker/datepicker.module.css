@@ -1,0 +1,41 @@
+.input_relative_root{
+    @apply flex content-evenly w-full h-auto relative rounded-lg shadow p-4 z-10;
+}
+.textField_input{
+    @apply w-full leading-none text-gray-600 font-medium;
+}
+.textField_input:focus{
+    @apply outline-none;
+}
+.textField_icon{
+    @apply  w-10 h-10 text-white bg-purple-400 rounded-full p-1;
+}
+
+.gridcell{
+    @apply text-xs grid w-full overflow-auto;
+    grid-template-columns: repeat(7, minmax(50px, 1fr));
+}
+
+.daynames {
+    @apply text-xs text-gray-500 text-center font-medium my-4 leading-10 border-b border-t border-purple-300;
+}
+
+.svgchevron{
+    @apply w-4 h-4 cursor-pointer text-purple-500;
+}
+
+
+.motion{
+    @apply bg-white w-full rounded-lg shadow p-4 absolute left-0 z-0 mt-1;
+}
+
+.header{
+    @apply flex items-center justify-between mt-4;
+}
+
+.cellsCard{
+    @apply p-2 rounded-lg cursor-pointer ;
+}
+.cellsCard:hover{
+    @apply bg-purple-500 text-white;
+}
