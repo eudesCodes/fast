@@ -68,7 +68,11 @@ export const Avatar = React.forwardRef<HTMLDivElement, TAvatarTypes>(
             >
                 {resultats?.map((resultat, i) => (
                     <div key={i} className={classnames(styles[`avatar__${className?.variant}`])}>
-                        <img src={resultat?.avatarImage} alt={resultat.avatarName} />
+                        <img
+                            src={resultat?.avatarImage}
+                            alt={resultat.avatarName}
+                            className={styles?.imageavatar}
+                        />
                         <div
                             className={classnames(styles[`avatar_dot__${className?.variant}`])}
                         ></div>

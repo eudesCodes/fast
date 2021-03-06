@@ -1,0 +1,12 @@
+/**
+* Border Radius css
+*/
+.rounded__none{
+    @apply rounded-none ;
+}
+.rounded__full{
+    @apply rounded-full;
+}
+.rounded__medium{
+    @apply rounded-lg;
+}

@@ -18,3 +18,7 @@ export * from 'src/ui/components/dropzone/dropzone';
 export * from 'src/ui/components/dragAndDropList/dragAndDropList';
 export * from 'src/ui/components/calendar/calendar';
 export * from 'src/ui/components/datepicker/datepicker';
+export * from 'src/ui/components/cardImage/cardImage';
+export * from 'src/ui/components/image/image';
+export * from 'src/ui/components/snapshotImage/snapshotImage';
+export * from 'src/ui/components/snapshotVideo/snapshotVideo';

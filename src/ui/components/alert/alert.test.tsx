@@ -3,11 +3,10 @@ import { render, screen } from '@testing-library/react';
 // import userEvent from '@testing-library/user-event';
 import { Alert } from './alert';
 
-describe('accordion component render correctly', () => {
-    it('should allow user to see accordion', () => {
-        render(<Alert />);
+describe('Alert component render correctly', () => {
+    it('should component render correctly', () => {
+        render(<Alert className={{ variant: 'default' }} />);
 
-        expect(screen.getByText('Heading')).toBeInTheDocument();
-        expect(screen.getByText('CONTENT')).toBeInTheDocument();
+        expect(screen.getByText(/your browser is outdated!/i)).toBeInTheDocument();
     });
 });
