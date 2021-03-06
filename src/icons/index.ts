@@ -11,3 +11,5 @@ export * from 'src/icons/svg/chevronleft';
 export * from 'src/icons/svg/chevronup';
 export * from 'src/icons/svg/bell';
 export * from 'src/icons/svg/calendar';
+export * from 'src/icons/svg/chat';
+export * from 'src/icons/svg/share';

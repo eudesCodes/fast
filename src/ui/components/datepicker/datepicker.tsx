@@ -84,7 +84,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
         const onNextMonth = React.useCallback(
             (event: React.MouseEvent<SVGElement, MouseEvent>): void => {
                 event?.preventDefault();
-                setCurrentMonth(days(currentMonth).add(1, 'month'));
+                setCurrentMonth(currentMonth.add(1, 'month'));
             },
             [currentMonth],
         );
@@ -98,7 +98,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
         const onPreviousMonth = React.useCallback(
             (event: React.MouseEvent<SVGElement, MouseEvent>): void => {
                 event?.preventDefault();
-                setCurrentMonth(days(currentMonth).subtract(1, 'month'));
+                setCurrentMonth(currentMonth.subtract(1, 'month'));
             },
             [currentMonth],
         );
@@ -135,7 +135,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
              * @description
              * @returns { days.Dayjs }
              */
-            const startDayOfWeekendOfMonth: days.Dayjs = days(currentMonth).startOf('week');
+            const startDayOfWeekendOfMonth: days.Dayjs = currentMonth.startOf('week');
 
             for (let w = 0; w <= 6; w++) {
                 weekDays.push(startDayOfWeekendOfMonth.add(w, 'day').format('ddd'));
@@ -152,7 +152,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
              * @description
              * @returns { days.Dayjs }
              */
-            let startCellDayOfWeekendOfMonth: days.Dayjs = days(currentMonth)
+            let startCellDayOfWeekendOfMonth: days.Dayjs = currentMonth
                 .startOf('month')
                 .startOf('week');
 
@@ -161,7 +161,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
              * @description
              * @returns { days.Dayjs }
              */
-            const endCellDayOfWeekendOfMonth: days.Dayjs = days(currentMonth)
+            const endCellDayOfWeekendOfMonth: days.Dayjs = currentMonth
                 .endOf('month')
                 .endOf('week');
 
@@ -194,12 +194,12 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
                     <input
                         type="text"
                         name={name}
+                        autoComplete="OFF"
                         ref={mergeRefs([outRef, forwardRef])}
                         className={classnames(styles?.textField_input)}
                         placeholder="hello world!"
                         value={selectedDate?.format(cellFormat[2])}
                     />
-
                     <div className={classnames(styles?.textField_icon)}>
                         <CalendarIcon className="w-full h-full" />
                     </div>
@@ -217,9 +217,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
                                 className={styles?.svgchevron}
                                 onClick={onPreviousMonth}
                             />
-                            <span className="text-xs">
-                                {days(currentMonth).format(cellFormat[3])}
-                            </span>
+                            <span className="text-xs">{currentMonth.format(cellFormat[3])}</span>
                             <ChevronRightIcon
                                 className={styles?.svgchevron}
                                 onClick={onNextMonth}
