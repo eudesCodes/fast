@@ -17,9 +17,8 @@
 }
 
 .btn_toast_exemple{
-    @apply rounded text-white cursor-pointer;
-    background: linear-gradient(to right bottom, rgb(87, 217, 163), rgb(54, 179, 126)) left top no-repeat;
-    border: 0px;
+    @apply rounded text-white cursor-pointer bg-purple-500;
+    border: none;
     line-height: 2.2em;
     padding-left: 1.1em;
     padding-right: 1.1em;

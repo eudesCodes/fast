@@ -166,7 +166,7 @@ export const Toast = (): JSX.Element => {
     return (
         <button
             className={styles?.btn_toast_exemple}
-            onClick={() => add('hello world!', { appearance: 'success' })}
+            onClick={() => add('hello world!', { appearance: 'error' })}
         >
             Add Toast
         </button>

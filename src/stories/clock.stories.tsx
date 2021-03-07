@@ -16,7 +16,7 @@ export const timecircle = Template.bind({});
 
 // Add your props arguments  here
 timecircle.args = {
-    endDate: new Date('5/13/2021'),
+    endDate: new Date('1/1/2022'),
     className: {
         variant: 'timecircle',
     },
