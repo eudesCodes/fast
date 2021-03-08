@@ -22,3 +22,4 @@ export * from 'src/ui/components/cardImage/cardImage';
 export * from 'src/ui/components/image/image';
 export * from 'src/ui/components/snapshotImage/snapshotImage';
 export * from 'src/ui/components/snapshotVideo/snapshotVideo';
+export * from 'src/ui/components/virtualized/virtualized';
