@@ -56,7 +56,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
 
         /** @description useSate: returns a stateful value, and a function to update it **/
         const [currentMonth, setCurrentMonth] = React.useState<days.Dayjs>(days(new Date()));
-        const [currentDays, setCurrentDays] = React.useState<string[]>([]);
+        const [currentDays, setCurrentDays] = React.useState<JSX.Element[]>([]);
         const [currentCells, setCurrentCells] = React.useState<JSX.Element[]>([]);
         const [selectedDate, setSelectedDate] = React.useState<days.Dayjs>();
         const [datapickerOpen, setDatapickerOpen] = React.useState<boolean>(false);
@@ -128,7 +128,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
             /**
              * Create the days : Sun,....Sat
              */
-            const weekDays: string[] = [];
+            const weekDays: JSX.Element[] = [];
 
             /**
              * @constant startDayOfWeekendOfMonth
@@ -138,7 +138,7 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
             const startDayOfWeekendOfMonth: days.Dayjs = currentMonth.startOf('week');
 
             for (let w = 0; w <= 6; w++) {
-                weekDays.push(startDayOfWeekendOfMonth.add(w, 'day').format('ddd'));
+                weekDays.push(<span>{startDayOfWeekendOfMonth.add(w, 'day').format('ddd')}</span>);
             }
             setCurrentDays(weekDays);
 
@@ -225,17 +225,11 @@ export const Datepicker = React.forwardRef<HTMLDivElement, TDatepickerTypes>(
                         </div>
                         <div className={classnames(styles?.gridcell, styles?.daynames)}>
                             {/* Days */}
-                            {currentDays?.map((day: string, index: number) => (
-                                <span key={index}>{day}</span>
-                            ))}
+                            {currentDays}
                         </div>
                         <div className={classnames(styles?.gridcell, 'text-center')}>
                             {/* Cells */}
-                            {currentCells?.map((cell: JSX.Element, index: number) => (
-                                <span key={index} className="p-3">
-                                    {cell}
-                                </span>
-                            ))}
+                            {currentCells}
                         </div>
                     </motion.div>
                 )}

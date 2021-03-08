@@ -57,7 +57,7 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
             dayjs(new Date()),
         );
         const [stateCurrentCellsDay, setStateCurrentCellsDay] = React.useState<JSX.Element[]>([]);
-        const [stateDays, setStateDays] = React.useState<Array<string>>([]);
+        const [stateDays, setStateDays] = React.useState<JSX.Element[]>([]);
         const [stateDateSelected, setStateDateSelected] = React.useState<string>();
 
         /**
@@ -114,14 +114,18 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
              * @constant days
              * @return { string[] }
              */
-            const days: string[] = [];
+            const days: JSX.Element[] = [];
             /**
              * @constant startDate
              */
-            const startDate: dayjs.Dayjs = dayjs(stateCurrentMonth).startOf('week');
+            const startDate: dayjs.Dayjs = stateCurrentMonth.startOf('week');
 
             for (let i = 0; i <= 6; i++) {
-                days.push(startDate.add(i, 'days').format(cellFormat[1]));
+                days.push(
+                    <span className={classnames(styles?.daynames)}>
+                        {startDate.add(i, 'days').format(cellFormat[1])}
+                    </span>,
+                );
             }
 
             setStateDays(days);
@@ -139,16 +143,14 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
              * @constant startDateForCells
              * @return { dayjs.Dayjs }
              */
-            let startDateForCells: dayjs.Dayjs = dayjs(stateCurrentMonth).startOf('week');
+            let startDateForCells: dayjs.Dayjs = stateCurrentMonth.startOf('week');
 
             /**
              * @constant endDateForCells
              * @description
              * @return { dayjs.Dayjs }
              */
-            const endDateForCells: dayjs.Dayjs = dayjs(stateCurrentMonth)
-                .endOf('month')
-                .endOf('week');
+            const endDateForCells: dayjs.Dayjs = stateCurrentMonth.endOf('month').endOf('week');
 
             /**
              * @constant nowDate
@@ -159,23 +161,24 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
 
             while (startDateForCells <= endDateForCells) {
                 for (let i = 0; i <= 6; i++) {
-                    const selectedDate: boolean =
+                    const selected: boolean =
                         stateDateSelected === startDateForCells?.format(cellFormat[2]);
-                    const nowSelected: boolean =
-                        nowDate === startDateForCells?.format(cellFormat[2]);
+                    const now: boolean = nowDate === startDateForCells?.format(cellFormat[2]);
 
                     cellsdays.push(
-                        <div
-                            onClick={onDatePickerFn(startDateForCells)}
-                            className={classnames('cursor-pointer p-4', {
-                                'bg-purple-300 text-white': selectedDate,
-                                'bg-green-300 text-white': nowSelected,
-                            })}
-                        >
-                            {dayjs(startDateForCells).format(cellFormat[0])}
+                        <div className={classnames(styles?.days)}>
+                            <div
+                                onClick={onDatePickerFn(startDateForCells)}
+                                className={classnames('cursor-pointer p-4', {
+                                    'bg-purple-300 text-white': selected,
+                                    'bg-green-300 text-white': now,
+                                })}
+                            >
+                                {startDateForCells.format(cellFormat[0])}
+                            </div>
                         </div>,
                     );
-                    startDateForCells = dayjs(startDateForCells).add(1, 'day');
+                    startDateForCells = startDateForCells.add(1, 'day');
                 }
             }
             setStateCurrentCellsDay(cellsdays);
@@ -188,9 +191,7 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
                 ref={mergeRefs([outRef, forwardRef])}
             >
                 <div className="flex items-center justify-between justify-content py-5 px-12">
-                    <span className="w-1/2 text-xs">
-                        {dayjs(stateCurrentMonth).format(cellFormat[3])}
-                    </span>
+                    <span className="w-1/2 text-xs">{stateCurrentMonth.format(cellFormat[3])}</span>
                     <span className="w-1/2">
                         <ChevronLeftIcon
                             className="w-4 h-4 inline-block cursor-pointer mr-1"
@@ -203,20 +204,8 @@ export const Calendar = React.forwardRef<HTMLDivElement, TCalendarTypes>(
                     </span>
                 </div>
                 <div className="bg-white relative">
-                    <div className={classnames(styles?.cells)}>
-                        {stateDays?.map((day: string, index: number) => (
-                            <span className={classnames(styles?.daynames)} key={index}>
-                                {day}
-                            </span>
-                        ))}
-                    </div>
-                    <div className={classnames(styles?.cells)}>
-                        {stateCurrentCellsDay?.map((cellsADy: JSX.Element, index: number) => (
-                            <div className={classnames(styles?.days)} key={index}>
-                                {cellsADy}
-                            </div>
-                        ))}
-                    </div>
+                    <div className={classnames(styles?.cells)}>{stateDays}</div>
+                    <div className={classnames(styles?.cells)}>{stateCurrentCellsDay}</div>
                 </div>
             </div>
         );
