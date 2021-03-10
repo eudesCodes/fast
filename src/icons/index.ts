@@ -13,3 +13,4 @@ export * from 'src/icons/svg/bell';
 export * from 'src/icons/svg/calendar';
 export * from 'src/icons/svg/chat';
 export * from 'src/icons/svg/share';
+export * from 'src/icons/svg/logo';
