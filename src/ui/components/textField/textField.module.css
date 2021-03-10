@@ -1,0 +1,87 @@
+*{ user-select: none;}
+
+.textField_label_root{
+    @apply flex flex-wrap content-evenly w-full h-auto cursor-pointer px-4;
+}
+
+/**
+* shadow css
+*/
+.shadow__none{
+    @apply shadow-none
+}
+.shadow__inner{
+    @apply shadow-inner
+}
+.shadow__medium{
+    @apply shadow-md border-0;
+}
+/**
+* Border css
+*/
+.border__none{
+    @apply border-0
+}
+
+.border__purple{
+    @apply border border-2 border-purple-500;
+}
+
+/**
+* Border Radius css
+*/
+.rounded__none{
+    @apply rounded-none ;
+}
+.rounded__full{
+    @apply rounded-full;
+}
+.rounded__medium{
+    @apply rounded-xl;
+}
+
+/** Floating **/
+.textField_icon__floating{
+    @apply flex-wrap content-center w-4 h-auto text-purple-500;
+}
+
+.textField_relative_root__floating{
+    @apply w-auto flex-1 h-auto relative;
+}
+
+.textField_input__floating{
+    @apply w-full h-10 px-4 text-purple-500;
+}
+
+.span_first_child__floating{
+    @apply absolute appearance-none cursor-text left-0 text-gray-400 pl-4 leading-normal text-base top-1 transition duration-500 ease-in-out;
+}
+
+input:focus~.span_first_child__floating,input:not(:placeholder-shown)~ .span_first_child__floating{
+    @apply transform scale-75 -translate-y-4 px-2 text-purple-500 bg-white;
+}
+
+
+/** default  css custom **/
+
+
+
+.textField_icon__default{
+    @apply flex-wrap content-center w-4 h-auto text-purple-500;
+}
+
+.textField_relative_root__default{
+    @apply w-auto flex-1 h-auto relative;
+}
+
+.textField_input__default{
+    @apply w-full h-10 px-4 text-purple-500;
+}
+
+.span_first_child__default{
+    @apply absolute appearance-none cursor-text left-0 text-gray-400 pl-4 leading-normal text-base top-1 transition duration-500 ease-in-out;
+}
+
+input:focus~.span_first_child__default,input:not(:placeholder-shown)~ .span_first_child__default{
+    @apply hidden;
+}

@@ -1,0 +1,22 @@
+.anchor_root{
+    @apply inline-flex items-center justify-center cursor-pointer;
+}
+
+
+
+/** default css custom */
+.anchor_child__default{
+    @apply text-purple-500;
+}
+.anchor_label__default::hover{
+    @apply underline;
+}
+/** icon **/
+.anchor_child__icon{
+    @apply text-purple-500;
+}
+
+.anchor_label__icon{}
+.anchor_label__icon::hover{
+    @apply underline;
+}

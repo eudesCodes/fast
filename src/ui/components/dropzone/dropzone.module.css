@@ -1,0 +1,12 @@
+.dropzone_root{
+    @apply flex justify-center rounded-xl border border-dashed border-purple-500 flex-wrap content-center w-auto h-auto cursor-pointer text-purple-500 p-5 overflow-hidden;
+}
+
+.drop_message {
+    @apply flex flex-col w-auto h-auto;
+}
+
+.upload_icon {
+    @apply w-12 h-12 relative;
+    margin: 0 auto;
+}

@@ -1,0 +1,41 @@
+
+
+.banner_root__default{
+    @apply text-white px-6 py-4 border-0 relative mb-4 bg-red-500;
+}
+
+
+
+.banner_text{
+    @apply inline-block align-middle mr-8;
+}
+
+.banner_btn{
+    @apply absolute bg-transparent text-xl right-0 top-0 mt-4 mr-6 outline-none ;
+}
+
+
+/**
+* shadow css
+*/
+.shadow__none{
+    @apply shadow-none
+}
+.shadow__inner{
+    @apply shadow-inner
+}
+.shadow__medium{
+    @apply shadow-md border-0;
+}
+/**
+* Border Radius css
+*/
+.rounded__none{
+    @apply rounded-none ;
+}
+.rounded__full{
+    @apply rounded-full;
+}
+.rounded__medium{
+    @apply rounded-xl;
+}

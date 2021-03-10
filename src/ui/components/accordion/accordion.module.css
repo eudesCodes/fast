@@ -1,0 +1,35 @@
+*{ user-select: none;}
+
+
+.accordion_child{
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+   
+}
+/**
+*/
+.panel__normal{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+}
+.header__normal{
+    @apply flex bg-purple-500 text-white w-full h-auto relative;
+    padding: 5px  2px;
+    cursor: pointer;
+   
+}
+.title__normal{
+    flex: 1;
+}
+
+.icon__normal{
+    @apply flex justify-center flex-wrap content-center relative;
+    width: 15px;
+    transition: transform .55s ease-in;
+}
+
+ 

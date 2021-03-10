@@ -1,0 +1,18 @@
+
+.calendar{
+    @apply m-auto overflow-hidden w-full shadow-md rounded-l bg-white overflow-hidden;
+}
+.cells {
+    @apply text-xs text-gray-700 grid w-full overflow-auto;
+    grid-template-columns: repeat(7, minmax(20px, 1fr));
+   
+}
+
+.daynames {
+    @apply text-xs text-gray-500 text-center font-medium  leading-10 border-b border-t border-purple-300;
+}
+
+.days{
+    @apply text-right text-xs box-border text-purple-400 relative border-b border-r border-purple-300;
+  
+}
